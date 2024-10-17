@@ -7,7 +7,7 @@ execute as @e[tag=speclib.root,predicate=speclib:id] at @s at @e[tag=speclib.spe
 
 #> rotating spectator
 execute as @a[tag=speclib.spectating] at @s run function speclib:global/score_check
-execute as @e[tag=speclib.cam,predicate=speclib:id] at @s rotated as @p positioned as @e[tag=speclib.root,sort=nearest,limit=1] run tp @s ^ ^ ^-2.1
+execute as @e[tag=speclib.cam,predicate=speclib:id] at @s rotated as @p positioned as @e[tag=speclib.root,sort=nearest,limit=1] positioned ^ ^0.5 ^ run function speclib:private/teleport
 
 #> kill all unequipped cameras:
 execute as @a unless score @s speclib.id = @e[tag=speclib.spectatee,sort=nearest,limit=1] speclib.id run tag @s remove speclib.spectating

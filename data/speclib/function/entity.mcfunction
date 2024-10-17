@@ -1,4 +1,5 @@
 # $(tag)
+tag @s add speclib.spectating
 scoreboard players reset @s speclib.id
 tag @e[sort=nearest,limit=1,distance=..3] remove speclib.spectatee
 $tag @e[tag=$(tag),distance=..3] remove speclib.spectatee
